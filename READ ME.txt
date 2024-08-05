@@ -1,0 +1,63 @@
+
+Sorry for the late submission, but you've sent me the assignment on the day of my tavel, 
+and I couldn't start with it until I came back to Lebanon. I tried to contact you before,
+but all your socials have automated replies.
+
+Thank you for your consideration...
+
+-------------------------------------------------------------------------------------------
+
+Please run "npm install" before running the app.
+
+-------------------------------------------------------------------------------------------
+
+1) Creation:
+-------------
+
+-I created the app and added materials, components, and the directive using the CLI.
+
+-------------------------------------------------------------------------------------------
+
+2) Caching:
+------------
+
+I applied caching by adding a service worker using the PWA package, then built the package
+to test it.
+
+For testing the service worker, I installed http-server package and then run the app on 
+port 8081. It will give you 3 links to test it. However, some of them may not work. So, 
+PLEASE TRY ALL LINKS AND REFRESH THE PAGES to make sure the service worker functions
+correctly.
+
+Theses are the commands I used:
+
+-ng add @angular/pwa
+-npm install -g http-server
+-ng build --configuration=production
+-http-server -p 8081
+
+Please build the application and go to the folder that contains the index.html in the dist
+folder, then run http-server -p 8081 
+
+-------------------------------------------------------------------------------------------
+
+3) Ngrx Store + PWA Logic:
+---------------------------
+
+I'm sure of my app's effeciency because I have cached 2 pages of users at a time, and the 
+app doesnt send an http request(even to the service worker) unless the users page isn't in
+store, or the user isn't found in the users page that is find in the store. 
+
+I also didn't cache the user endpoint because I'm caching the whole page and I'm checking
+if the user is already in the store before even checking the cache, so no need to cache
+a single user.
+
+-------------------------------------------------------------------------------------------
+
+4) Custom Diretives:
+---------------------
+
+I have added a custom directive that asks the users if they are sure they want to go back
+to the users list. It isnt't really necessary, and I wouldn't have added it except to 
+demonstrate my skills in all aspects of Angular, as requested in the requirements 
+document you sent me.
